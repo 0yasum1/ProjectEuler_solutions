@@ -1,34 +1,34 @@
 package euler;
 
+import java.util.Scanner;
 
+/*
+ * spiral of numbers
+ * https://projecteuler.net/problem=28
+ */
 
 public class Problem28_numberSpiralDiagonals {
 	
 	public static void main(String[] args) {
-		spiralFunction();
+		Scanner in = new Scanner(System.in);
+		spiralFunction(in.nextInt());
+		in.close();
 	}
 	
-	static void spiralFunction() {
-		//print numbers from 1 to 25 in a clockwise expanding spiral from center
-		// as long as i +1 is smaller than j - i
-		// 10 + i
-		// 21 - i
-		int[][] box = new int[5][5];
-		int row = 2;
-		int column = 2;
+	static void spiralFunction(int userInput) {
+		int[][] box = new int[(int)Math.sqrt((Double.valueOf(userInput)))+1][(int)Math.sqrt((Double.valueOf(userInput)))+1];
+		int row = (int)Math.sqrt((Double.valueOf(userInput)))/2;
+		int column = (int)Math.sqrt((Double.valueOf(userInput)))/2;
 		int steps = 1;
 		int counter = 1;
 		
 		char direction = 'r';
 		
-		while(counter < 25) {
+		while(counter < userInput) {
 			box[row][column] = counter;
 			
 			switch(direction) {
 			case 'r':
-				if(steps == 5) {
-					steps = 4;
-				}
 				for(int i = 0; i < steps; i++) {
 					column = column + 1;
 					counter++;
@@ -70,9 +70,9 @@ public class Problem28_numberSpiralDiagonals {
 			}
 		}
 		
-		for(int i = 0; i < 5; i++)
+		for(int i = 0; i < (int)Math.sqrt((Double.valueOf(userInput)))+1; i++)
 		   {
-		      for(int j = 0; j < 5; j++)
+		      for(int j = 0; j < (int)Math.sqrt((Double.valueOf(userInput)))+1; j++)
 		      {
 		         System.out.printf("%5d ", box[i][j]);
 		      }

@@ -1,5 +1,10 @@
 package euler;
 
+/*
+ * sum of the digits in the factorial of 100
+ * https://projecteuler.net/problem=20
+ */
+
 public class Problem20_factorialDigitSum {
 	public static void main(String[] args) {
 		worker bob = new worker();

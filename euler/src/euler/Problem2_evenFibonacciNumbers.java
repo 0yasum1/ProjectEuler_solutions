@@ -1,6 +1,11 @@
 package euler;
 import java.util.ArrayList;
 
+/*
+ * sum of even-valued terms in the fibonacci sequence below 4million
+ * https://projecteuler.net/problem=2
+ */
+
 public class Problem2_evenFibonacciNumbers {
     public static void main(String[] args) {
         // timer

@@ -2,7 +2,10 @@ package euler;
 
 import java.util.*;
 
-// https://projecteuler.net/problem=23
+/*
+ * sum of all positive integers which cannot be written as sum of abundant numbers
+ * https://projecteuler.net/problem=23
+ */
 
 public class Problem23_nonAbundantSums {
 	public static void main(String[] args) {
