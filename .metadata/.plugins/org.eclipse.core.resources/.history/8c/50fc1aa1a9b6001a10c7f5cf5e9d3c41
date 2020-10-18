@@ -1,0 +1,24 @@
+package euler;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+/*
+ * decrypt msg and find sum of ASCII values in original text
+ * https://projecteuler.net/problem=59
+ */
+
+public class Problem59_XORDecryption {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader objReader = new BufferedReader(new FileReader(".\\.\\.\\ressources\\p059_cipher.txt"));
+		String content;
+		String strCurrentLine;
+		while ((strCurrentLine = objReader.readLine()) != null) {
+			content += strCurrentLine;
+		}
+	}
+	
+
+}

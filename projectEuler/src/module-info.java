@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author joche
- *
- */
-module projectEuler {
-}
